@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  background: #020617;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+/* Leaflet */
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  background: #0f172a !important;
+}
+
+.leaflet-tile {
+  filter: brightness(0.7) saturate(0.8);
+}
+
+.leaflet-control-zoom a {
+  background: #020617 !important;
+  color: white !important;
+  border-color: #334155 !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(2, 6, 23, 0.85) !important;
+  color: #94a3b8 !important;
+  font-size: 9px;
+}
+
+.leaflet-control-attribution a {
+  color: #38bdf8 !important;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .bottom-navigation {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
